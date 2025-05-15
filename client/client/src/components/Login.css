@@ -1,0 +1,125 @@
+/* Container for the entire form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.text-center h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #1f2937;
+}
+
+.text-center p {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Input group with icons */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #f9fafb;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.input-group svg {
+  color: #6b7280;
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"] {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+/* Error Text */
+.error-text {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: -1rem;
+  margin-left: 0.5rem;
+}
+
+/* Checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+}
+
+/* Switch link */
+.switch-form {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.switch-form:hover {
+  color: #1e3a8a;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-group svg {
+    margin-bottom: 0.5rem;
+  }
+
+  .checkbox-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

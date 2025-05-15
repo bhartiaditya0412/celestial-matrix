@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  server:
+    build:
+      context: ./server
+    working_dir: /app
+    volumes:
+      - ./server:/app
+    ports:
+      - "3000:3000"
+    command: npm run devStart
+
+  client:
+    build:
+      context: ./client/client
+    working_dir: /app
+    volumes:
+      - ./client/client:/app
+    ports:
+      - "5173:5173"
+    command: npm run dev
